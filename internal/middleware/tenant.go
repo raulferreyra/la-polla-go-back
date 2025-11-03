@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"polla/internal/models"
+	"go-backend/internal/models"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

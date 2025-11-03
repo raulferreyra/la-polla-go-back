@@ -1,7 +1,7 @@
 package server
 
 import (
-	"polla/internal/router"
+	"go-backend/internal/router"
 )
 
 func New(deps router.Deps) *router.Engine {

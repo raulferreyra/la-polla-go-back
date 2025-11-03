@@ -8,8 +8,8 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
-	"polla/internal/auth"
-	"polla/internal/models"
+	"go-backend/internal/auth"
+	"go-backend/internal/models"
 )
 
 type LoginReq struct {

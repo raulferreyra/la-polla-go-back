@@ -1,8 +1,8 @@
 package router
 
 import (
-	"polla/internal/handlers"
-	"polla/internal/middleware"
+	"go-backend/internal/handlers"
+	"go-backend/internal/middleware"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

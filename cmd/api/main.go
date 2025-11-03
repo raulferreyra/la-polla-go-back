@@ -1,16 +1,35 @@
 package main
 
 import (
+	"fmt"
 	"log"
+	"math/rand/v2"
+	"os"
+	"time"
 
-	"polla/internal/config"
-	"polla/internal/db"
-	"polla/internal/logger"
-	"polla/internal/models"
-	"polla/internal/router"
+	"go-backend/internal/config"
+	"go-backend/internal/db"
+	"go-backend/internal/logger"
+	"go-backend/internal/models"
+	"go-backend/internal/router"
 )
 
+func showBanner() {
+	n := rand.IntN(6) + 1
+	path := fmt.Sprintf("internal/banner/b%d.txt", n)
+
+	b, err := os.ReadFile(path)
+	if err != nil {
+		log.Printf("No se pudo leer el banner (%s): %v", path, err)
+		return
+	}
+	fmt.Println(string(b))
+}
+
 func main() {
+	rand.Seed(uint64(time.Now().UnixNano()))
+	showBanner()
+
 	cfg := config.Load()
 	lg := logger.New()
 	defer lg.Sync()

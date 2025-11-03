@@ -1,4 +1,4 @@
-module github.com/usuario/la-polla/go-backend
+module go-backend
 
 go 1.25
 
