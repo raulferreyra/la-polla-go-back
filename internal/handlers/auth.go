@@ -5,11 +5,12 @@ import (
 	"encoding/hex"
 	"net/http"
 
-	"golang.org/x/crypto/bcrypt"
-	"gorm.io/gorm"
-
 	"go-backend/internal/auth"
 	"go-backend/internal/models"
+
+	"github.com/gin-gonic/gin"
+	"golang.org/x/crypto/bcrypt"
+	"gorm.io/gorm"
 )
 
 type LoginReq struct {

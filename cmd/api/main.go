@@ -5,7 +5,6 @@ import (
 	"log"
 	"math/rand/v2"
 	"os"
-	"time"
 
 	"go-backend/internal/config"
 	"go-backend/internal/db"
@@ -27,7 +26,6 @@ func showBanner() {
 }
 
 func main() {
-	rand.Seed(uint64(time.Now().UnixNano()))
 	showBanner()
 
 	cfg := config.Load()
