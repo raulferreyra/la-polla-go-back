@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"math/rand/v2"
 	"os"
 
 	"go-backend/internal/config"
@@ -14,8 +13,7 @@ import (
 )
 
 func showBanner() {
-	n := rand.IntN(6) + 1
-	path := fmt.Sprintf("internal/banner/b%d.txt", n)
+	path := fmt.Sprint("internal/banner/banner.txt")
 
 	b, err := os.ReadFile(path)
 	if err != nil {
